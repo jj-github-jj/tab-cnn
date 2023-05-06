@@ -1,7 +1,7 @@
 import numpy as np
-import keras
+from tensorflow import keras # was import keras
 
-class DataGenerator(keras.utils.all_utils.Sequence):
+class DataGenerator(keras.utils.Sequence): # chnaged from keras.utils.all_utils
     
     def __init__(self, list_IDs, data_path="../data/spec_repr/", batch_size=128, shuffle=True, label_dim = (6,21), spec_repr="c", con_win_size=9):
         
